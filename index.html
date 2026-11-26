@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-wrapper">
+                <div class="logo">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h1>AI Генератор картинок</h1>
+            </div>
+
+            <button class="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </header>
+
+        <div class="main-content">
+            <form class="prompt-form">
+                <div class="prompt-container">
+                    <textarea name="prompt" required class="prompt-input"
+                        placeholder="Опишите изображение в деталях"></textarea>
+                    <button class="prompt-btn" type="button">
+                        <i class="fa-solid fa-dice"></i>
+                    </button>
+                </div>
+
+                <div class="prompt-actions">
+                    <div class="select-wrapper">
+                        <select name="colorization" class="custom-select" required>
+                            <option value="" selected disabled>
+                                Колоризация
+                            </option>
+                            <option value="black-white">Черно-белый</option>
+                            <option value="colored">Цветной</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select name="image-style" class="custom-select" required>
+                            <option value="" selected disabled>
+                                Стиль изображения
+                            </option>
+                            <option value="pixel-art">Pixel art</option>
+
+                            <option value="low">Низкая</option>
+                            <option value="middle">Средняя</option>
+                            <option value="high">Высокая</option>
+                        </select>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <select name="style" class="custom-select" required>
+                            <option value="" selected disabled>
+                                Контрастность
+                            </option>
+                            <option value="comic-book">Комикс</option>
+                            <option value="cinematic">Кинематограф</option>
+                            <option value="origami">Оригами</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="generate-btn">
+                        <i class="fa-solid fa-wand-sparkles"></i>
+                        Generate
+                    </button>
+                </div>
+
+
+
+                <div class="gallery">
+                    <div class="img-card loading">
+                        <div class="status-container">
+                            <div class="spinner"></div>
+                            <p class="status-text">Generating...</p>
+                        </div>
+                        <img src="test.jpg" width="256" height="256" class="result-img" />
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
